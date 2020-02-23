@@ -6,5 +6,5 @@ def translate(word):
     return data[word]
 
 
-word = input("Enter word:")
-print(translate(word))
+input_word = input("Enter word:")
+print(translate(input_word))
