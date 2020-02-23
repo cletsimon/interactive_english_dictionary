@@ -1,11 +1,14 @@
 import json
+from difflib import get_close_matches
 
 data = json.load(open("data.json"))
 
 def translate(word):
-    word_lower = word.lower()
-    if word_lower in data:
-        return data[word_lower]
+    w = word.lower()
+    if w in data:
+        return data[w]
+    elif len(get_close_matches(w, data.keys(), cutoff=0.8)) > 0:
+        return "Did you mean '%s' instead?" % get_close_matches(w, data.keys(), cutoff=0.8)[0]
     else:
         return "The word doesn't exist. Please double check it."
 
