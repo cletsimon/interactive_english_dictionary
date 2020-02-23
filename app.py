@@ -9,6 +9,8 @@ def translate(word):
         return data[w]
     elif w.title() in data: #if user entered "delhi" this will check for "Delhi" as well.
         return data[w.title()]
+    elif w.upper() in data: #if user entered "USA" this will check for "USA" as well.
+        return data[w.upper()]
     elif len(get_close_matches(w, data.keys(), cutoff=0.8)) > 0:
         yn = input("Did you mean '%s' instead? \nEnter Y if yes, or N if no: " % get_close_matches(w, data.keys(), cutoff=0.8)[0])
         if yn == "Y":
