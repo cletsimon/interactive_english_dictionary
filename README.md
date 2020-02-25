@@ -1,3 +1,5 @@
+#app1: Interactive English Dictionary
+
 A python3 app that works as dictionary
 
 # installation
