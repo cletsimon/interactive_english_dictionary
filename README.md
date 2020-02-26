@@ -10,6 +10,6 @@ git clone git@github.com:cletsimon/interactive_english_dictionary.git
 ## Running the app
 ```
 % python3 app.py
-Enter word: howdy
+Enter word: hello
 Expression of greeting used by two or more people who meet each other.
 ```
